@@ -1,0 +1,23 @@
+.estructure-planet {
+  position: relative;
+  display: inline-block;
+}
+
+.structure-layer {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 80px;
+  z-index: 1;
+}
+.structure-layer-saturn {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 80px;
+  z-index: 1;
+}
