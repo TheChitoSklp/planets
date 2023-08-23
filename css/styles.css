@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;200&display=swap");
+
+:root {
+  --white-var: #ffffff;
+  --background-var: #070724;
+  --grey-trasparent-var: #38384f;
+  --grey-var: #838391;
+  --green-blue-var: #419ebb;
+  --orange-low-var: #eda249;
+  --orange-medium-var: #d14c32;
+  --orange-strong-var: #cd5120;
+  --reds-var: #d83a34;
+  --purple-var: #6f2ed6;
+  --green-var: #1ec2a4;
+  --blue-var: #2d68f0;
+}
+body {
+  background-color: var(--background-var);
+  color: var(--white-var);
+  font-family: "League Spartan", sans-serif;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar-nav {
+  position: fixed;
+  background-color: var(--background-var);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  left: 0;
+}
+.nav-link,
+.navbar-brand {
+  color: var(--white-var);
+}
+.navbar-brand {
+  font-family: "Antonio";
+  margin-bottom: 1rem;
+}
+.navbar-toggler[aria-expanded="false"] {
+  background-color: var(--white-var);
+}
+.links-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+.links-nav-planets {
+  display: flex;
+}
+.circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin: 10px;
+}
+.mercury {
+  background-color: var(--grey-var);
+}
+.venus {
+  background-color: var(--orange-low-var);
+}
+.earth {
+  background-color: var(--purple-var);
+}
+.mars {
+  background-color: var(--reds-var);
+}
+.jupiter {
+  background-color: var(--orange-medium-var);
+}
+.saturn {
+  background-color: var(--orange-strong-var);
+}
+.uranus {
+  background-color: var(--green-blue-var);
+}
+.neptune {
+  background-color: var(--blue-var);
+}
+.arrow,
+hr {
+  color: var(--grey-trasparent-var);
+}
+
+/* segundo nav OVERVIEW STRUCTURE SURFACE*/
+.more-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+.more-info-links {
+  list-style-type: none;
+}
+.more-info-links a {
+  text-decoration: none;
+  color: var(--grey-var);
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+article {
+  margin: 1.5rem;
+}
+.parametros {
+  width: 327px;
+  border: solid 1px var(--grey-trasparent-var);
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.info-planet {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.wikipedias {
+  color: var(--grey-var);
+}
+.subtitle-info,
+.subtitle-text {
+  padding: 12px 20px 0 20px;
+}
+.subtitle-info {
+  font-size: small;
+  color: var(--grey-var);
+}
+.subtitle-text {
+  font-weight: bold;
+}
+.more-info-links a.active {
+  color: var(--white-var);
+  border-bottom: 3px var(--blue-var) solid;
+  padding-bottom: 10px;
+}
