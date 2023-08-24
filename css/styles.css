@@ -31,6 +31,9 @@ body {
   z-index: 2;
   left: 0;
 }
+#secondaryNav-desktop {
+  display: none;
+}
 .nav-link,
 .navbar-brand {
   color: var(--white-var);
@@ -140,4 +143,98 @@ article {
   color: var(--white-var);
   border-bottom: 3px solid;
   padding-bottom: 10px;
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url(../src/img/estrellas.png);
+  }
+  .parent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 150px 150px 150px 150px;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "grid-planet grid-planet grid-planet grid-info grid-info"
+      "grid-planet grid-planet grid-planet grid-info grid-info"
+      "grid-planet grid-planet grid-planet grid-info grid-info"
+      "grid-planet grid-planet grid-planet grid-info grid-info"
+      "grid-data grid-data grid-data grid-data grid-data";
+  }
+
+  .grid-planet {
+    grid-area: grid-planet;
+  }
+
+  .grid-info {
+    grid-area: grid-info;
+  }
+
+  .grid-data {
+    grid-area: grid-data;
+  }
+
+  .navbar-nav {
+    position: relative;
+    background-color: var(--background-var);
+    width: 100%;
+    height: auto;
+    z-index: 2;
+    justify-content: end;
+  }
+  .navbar-brand {
+    margin-right: 10px;
+  }
+  .circle {
+    display: none;
+  }
+  #secondaryNav {
+    display: none;
+  }
+  #secondaryNav-desktop {
+    display: block;
+  }
+  .grid-planet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-planet img {
+    width: 290px;
+    height: 290px;
+  }
+  .grid-info {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    justify-content: center;
+  }
+  .more-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    padding-left: 0;
+  }
+  .more-info-links-desktop {
+    height: 48px;
+    width: 350px;
+    border: var(--grey-var) solid 1px;
+    list-style-type: none;
+    text-align: center;
+    margin: 10px;
+  }
+  .more-info-links-desktop a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white-var);
+    width: 350px;
+    height: 48px;
+  }
+  .grid-data {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }

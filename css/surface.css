@@ -21,3 +21,12 @@
   height: 80px;
   z-index: 1;
 }
+@media (min-width: 768px) {
+  .estructure-planet {
+    display: flex;
+  }
+  .structure-layer {
+    height: 170px !important;
+    width: 170px !important;
+  }
+}

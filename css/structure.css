@@ -19,3 +19,6 @@
   height: 62%;
   z-index: 1;
 }
+.grid-planet img {
+  width: auto;
+}

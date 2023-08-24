@@ -94,13 +94,22 @@ for (let i = 0; i < links.length; i++) {
     links[i].classList.add("active");
   }
 }
+//Active para desktop
+let currentUrlDesktop = window.location.href;
+let linksDesktop = document.querySelectorAll(".more-info-links-desktop a");
+for (let i = 0; i < linksDesktop.length; i++) {
+  if (linksDesktop[i].href === currentUrlDesktop) {
+    linksDesktop[i].classList.add("active");
+  }
+}
 
 
 
 //cambio de color borde 
 const borde = document.querySelector('.more-info-links a.active');
-const planeta = document.querySelector('.color-title').innerHTML;
-function asignarColorPlaneta(planeta) {
+const bordeDesktop = document.querySelector('.more-info-links-desktop a.active');
+const planet = document.querySelector('.color-title').innerHTML;
+function asignarColorPlaneta(planet) {
   const colores = {
       EARTH: '#6f2ed6',
       VENUS: '#eda249',
@@ -113,6 +122,7 @@ function asignarColorPlaneta(planeta) {
      
   };
 
-  return colores[planeta] || 'black'; // Si el planeta no coincide, asigna negro
+  return colores[planet] || 'black'; 
 }
-borde.style.borderColor = asignarColorPlaneta(planeta)
+borde.style.borderColor = asignarColorPlaneta(planet)
+bordeDesktop.style.backgroundColor = asignarColorPlaneta(planet)
