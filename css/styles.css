@@ -138,6 +138,6 @@ article {
 }
 .more-info-links a.active {
   color: var(--white-var);
-  border-bottom: 3px var(--blue-var) solid;
+  border-bottom: 3px solid;
   padding-bottom: 10px;
 }

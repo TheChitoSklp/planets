@@ -94,3 +94,25 @@ for (let i = 0; i < links.length; i++) {
     links[i].classList.add("active");
   }
 }
+
+
+
+//cambio de color borde 
+const borde = document.querySelector('.more-info-links a.active');
+const planeta = document.querySelector('.color-title').innerHTML;
+function asignarColorPlaneta(planeta) {
+  const colores = {
+      EARTH: '#6f2ed6',
+      VENUS: '#eda249',
+      JUPITER: '#d14c32',
+      MARS: '#d83a34',
+      MERCURY: '#838391',
+      NEPTURNE: '#2d68f0',
+      SATURN: '#cd5120',
+      URANUS: '#419ebb',
+     
+  };
+
+  return colores[planeta] || 'black'; // Si el planeta no coincide, asigna negro
+}
+borde.style.borderColor = asignarColorPlaneta(planeta)
